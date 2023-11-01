@@ -14,4 +14,10 @@ html, body{
     font-weight: bold;
 }
 
+.scrollable {
+    max-height: 300px; /* Defina a altura máxima desejada */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent; /* Define a cor da barra de rolagem como transparente */
+}
 
