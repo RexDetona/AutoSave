@@ -67,71 +67,162 @@
                         <div class="card h-100">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center">
                                 <h1 class="text-primary mb-4" style="font-weight: bolder;">Meus Fretes Cadastrados</h1>
-                                <button class="btn btn-warning btn-lg col-9" style="background-color: #FF7A00; color: #fff;">Visualizar</button>
+                                <button class="btn btn-warning btn-lg col-9"
+                                    style="background-color: #FF7A00; color: #fff;">Visualizar</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-8 col-lg-9 mb-4">
                         <div class="card h-100">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                    
-                                <div style="overflow: hidden; cursor: pointer;" onmouseover="this.style.transform='scale(0.95)'; this.style.transition='transform 0.2s ease-in-out';" onmouseout="this.style.transform='scale(1)'; this.style.transition='transform 0.2s ease-in-out';">
-                                    <div class="d-flex flex-column justify-content-center align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#modalcadastrofretes" aria-expanded="false" aria-controls="collapse">
+
+                                <div style="overflow: hidden; cursor: pointer;"
+                                    onmouseover="this.style.transform='scale(0.95)'; this.style.transition='transform 0.2s ease-in-out';"
+                                    onmouseout="this.style.transform='scale(1)'; this.style.transition='transform 0.2s ease-in-out';">
+                                    <div class="d-flex flex-column justify-content-center align-items-center"
+                                        type="button" data-bs-toggle="modal" data-bs-target="#modalcadastrofretes"
+                                        aria-expanded="false" aria-controls="collapse">
                                         <img src="adicionar 1.png">
                                         <h3 style="font-weight: bolder;">Adicionar frete</h3>
                                     </div>
                                 </div>
-                                    <!-- Adicione uma altura máxima e barra de rolagem para controlar o overflow -->
-                                    <div class="modal fade" id="modalcadastrofretes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
+                                <!-- Adicione uma altura máxima e barra de rolagem para controlar o overflow -->
+                                <div class="modal fade" id="modalcadastrofretes" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
                                             <div class="modal-header">
-                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Frete</h1>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Frete</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="row mb-3">
                                                     <div class="col">
-                                                      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                                                        <input type="text" class="form-control" placeholder="Veiculo"
+                                                            aria-label="First name">
                                                     </div>
                                                     <div class="col">
-                                                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                                                        
+                                                            <select id="tipoCarroceria" name="tipoCarroceria"  class="form-select">
+                                                                <option value="aberta">Carroceria Aberta</option>
+                                                                <option value="fechada">Carroceria Fechada</option>
+                                                                <option value="baixa">Carroceria Baixa</option>
+                                                                <option value="graneleira">Carroceria Graneleira</option>
+                                                                <option value="frigorifica">Carroceria Frigorífica</option>
+                                                                <option value="bau">Baú</option>
+                                                                <option value="cargaPesada">Carga Pesada</option>
+                                                                <option value="prancha">Prancha</option>
+                                                                <option value="plataforma">Plataforma</option>
+                                                                <option value="portaContainer">Porta Container</option>
+                                                                <option value="sider">Sider</option>
+                                                                <option value="cacambaBasculante">Caçamba Basculante</option>
+                                                                <option value="canavieira">Canavieira</option>
+                                                                <option value="florestal">Florestal</option>
+                                                                <option value="boiadeira">Boiadeira (Animais Vivos)</option>
+                                                                <option value="silo">Silo</option>
+                                                                <option value="cegonha">Cegonha</option>
+                                                                <option value="tanque">Tanque</option>
+                                                                <option value="botijoesDeGas">Botijões de Gás</option>
+                                                                <option value="munck">Munck</option>
+                                                                <option value="poliguindaste">Poliguindaste</option>
+                                                            </select>
                                                     </div>
-                                                  </div>
-                                                  <div class="row mb-3">
+                                                </div>
+                                                <div class="row mb-3">
                                                     <div class="col">
-                                                      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                                                        <input type="text" class="form-control" placeholder="Especie"
+                                                            aria-label="First name">
                                                     </div>
                                                     <div class="col">
-                                                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                                                        <input type="text" class="form-control" placeholder="KM"
+                                                            aria-label="Last name">
                                                     </div>
-                                                  </div>
-                                                  <div class="row mb-3">
+                                                </div>
+
+
+
+
+                                                <div class="row mb-3">
                                                     <div class="col">
-                                                      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                                                        <input type="text" class="form-control" placeholder="Produto"
+                                                            aria-label="First name">
                                                     </div>
+
                                                     <div class="col">
-                                                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                                                        <select id="tipoDeCarga" name="tipoDeCarga" class="form-select">
+                                                            <option value="grao">Grãos</option>
+                                                            <option value="cargaGeral">Carga Geral</option>
+                                                            <option value="cargaViva">Carga Viva</option>
+                                                            <option value="cargaSeca">Carga Seca</option>
+                                                            <option value="cargaPerigosa">Carga Perigosa</option>
+                                                            <option value="cargaFracionada">Carga Fracionada</option>
+                                                            <option value="cargaRefrigerada">Carga Refrigerada</option>
+                                                            <option value="cargaQuimica">Carga Química</option>
+                                                            <option value="cargaMovel">Carga Móvel</option>
+                                                            <option value="cargaPesada">Carga Pesada</option>
+                                                            <option value="outro">Outro</option>
+                                                        </select>
+                                                       
                                                     </div>
-                                                  </div>
+                                                </div>
+
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Tipos de Pagamento" aria-label="Last name">
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Precisa de Lona" aria-label="Last name">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="Pedagio"
+                                                            aria-label="Last name">
+                                                    </div>
+
+
+                                                    <div class="col">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Rastreanento" aria-label="Last name">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Agenciamento" aria-label="Last name">
+                                                    </div>
+
+
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="OBS"
+                                                            aria-label="Last name">
+                                                    </div>
+                                                </div>
+
                                             </div>
                                             <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                              <button type="button" class="btn btn-primary">Cadastrar</button>
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Fechar</button>
+                                                <button type="button" class="btn btn-primary">Cadastrar</button>
                                             </div>
-                                          </div>
                                         </div>
                                     </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                   
-                    
-                    
-                    
-                    
-                    
-                    
+
+
+
+
+
+
+
                 </div>
             </div>
 
@@ -154,14 +245,14 @@
 
         </main>
     </div>
-            
-    
+
+
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
