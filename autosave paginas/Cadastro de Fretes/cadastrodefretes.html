@@ -99,12 +99,30 @@
                                             <div class="modal-body">
                                                 <div class="row mb-3">
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Veiculo"
-                                                            aria-label="First name">
+                                                        <select id="tipoCarroceria" name="tipoCarroceria" class="form-select">
+                                                            <option value="" disabled selected>Local de Retirada</option>
+                                                            <option value="aberta">Carroceria Aberta</option>   
+                                                        </select>
                                                     </div>
                                                     <div class="col">
                                                         
                                                             <select id="tipoCarroceria" name="tipoCarroceria"  class="form-select">
+                                                                <option value="" disabled selected>Local de Entrega</option>
+                                                                <option value="aberta">Carroceria Aberta</option>                                                                
+                                                            </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <select id="tipoCarroceria" name="tipoCarroceria" class="form-select">
+                                                            <option value="" disabled selected>Tipo de Veiculo</option>
+                                                            <option value="aberta">Carroceria Aberta</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col">
+                                                        
+                                                            <select id="tipoCarroceria" name="tipoCarroceria"  class="form-select">
+                                                                <option value="" disabled selected>Tipo de Carroceria</option>
                                                                 <option value="aberta">Carroceria Aberta</option>
                                                                 <option value="fechada">Carroceria Fechada</option>
                                                                 <option value="baixa">Carroceria Baixa</option>
@@ -135,8 +153,12 @@
                                                             aria-label="First name">
                                                     </div>
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="KM"
-                                                            aria-label="Last name">
+                                                        <select id="tipoCarroceria" name="tipoCarroceria"  class="form-select">
+                                                            <option value="" disabled selected>Tipo de Pagamento</option>
+                                                            <option value="Pix">Pix</option>
+                                                            <option value="transferencia bancaria">Transferencia Bancaria/</option>
+                                                            <option value="Dinheiro">Dinheiro</option>                                                                                                                               
+                                                        </select>
                                                     </div>
                                                 </div>
 
@@ -151,6 +173,7 @@
 
                                                     <div class="col">
                                                         <select id="tipoDeCarga" name="tipoDeCarga" class="form-select">
+                                                            <option value="" disabled selected>Tipo de Carga</option>
                                                             <option value="grao">Grãos</option>
                                                             <option value="cargaGeral">Carga Geral</option>
                                                             <option value="cargaViva">Carga Viva</option>
@@ -164,37 +187,54 @@
                                                             <option value="outro">Outro</option>
                                                         </select>
                                                        
+                                                    </div>  
+                                                </div>
+
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        
+                                                        <input type="text" class="form-control"
+                                                        placeholder="KM" aria-label="Last name">
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <select id="tipoCarroceria" name="tipoCarroceria"  class="form-select">
+                                                            <option value="" disabled selected>Necessita de Lona </option>
+                                                            <option value="Sim">Sim</option>
+                                                            <option value="Não">Não</option>
+                                                        
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <select id="tipoCarroceria" name="tipoCarroceria"  class="form-select">
+                                                            <option value="" disabled selected>Necessita de Pedagio </option>
+                                                            <option value="Sim">Sim</option>
+                                                            <option value="Não">Não</option>
+                                                        
+                                                        </select>
+                                                    </div>
+
+
+                                                    <div class="col">
+                                                        <select id="tipoCarroceria" name="tipoCarroceria"  class="form-select">
+                                                            <option value="" disabled selected>Rastreanto </option>
+                                                            <option value="Sim">Sim</option>
+                                                            <option value="Não">Não</option>
+                                                        
+                                                        </select>
                                                     </div>
                                                 </div>
 
                                                 <div class="row mb-3">
                                                     <div class="col">
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Tipos de Pagamento" aria-label="Last name">
-                                                    </div>
-
-                                                    <div class="col">
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Precisa de Lona" aria-label="Last name">
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3">
-                                                    <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Pedagio"
-                                                            aria-label="Last name">
-                                                    </div>
-
-
-                                                    <div class="col">
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Rastreanento" aria-label="Last name">
-                                                    </div>
-                                                </div>
-
-                                                <div class="row mb-3">
-                                                    <div class="col">
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Agenciamento" aria-label="Last name">
+                                                        <select id="tipoCarroceria" name="tipoCarroceria"  class="form-select">
+                                                            <option value="" disabled selected>Agenciamento</option>
+                                                            <option value="Sim">Sim</option>
+                                                            <option value="Não">Não</option>
+                                                        
+                                                        </select>
                                                     </div>
 
 
