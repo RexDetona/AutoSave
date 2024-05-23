@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autosave</title>
     <link rel="stylesheet" href="stylelogin.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" href="../img/icone.png" type="image/x-icon">
+</head>
 <body class="d-md-block d-flex align-items-center">
     <div class="container-fluid">
         <div class="row">
             <!-- Coluna do formulário de login -->
             <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <form class="col-9 d-flex flex-column justify-content-between" style="height: 75vh;">
+                <form class="col-9 d-flex flex-column justify-content-between" style="height: 75vh;" id="loginForm">
                     <div class="mb-3">
-                        <h1 class="text-center"><span style="color: #FF7A00;">Auto</span> Save</h1>
+                        <h1 class="text-center"><span style="color: #FF7A00;">Mobby</span> Fretes</h1>
                     </div>
                     <p class="fw-bold fs-4">Login</p>
                     <div>
@@ -26,12 +25,15 @@
                                 <input style="--bs-focus-ring-color: rgba(255, 122, 0, .25);" placeholder="Ex: autosave@gmail.com" type="email" class="form-control rounded-0 focus-ring" id="inputEmail">
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col-sm-12">
                                 <label for="inputPassword" class="col-sm-2 col-form-label fs-5">Senha</label>
                                 <input style="--bs-focus-ring-color: rgba(255, 122, 0, .25);" type="password" placeholder="Senha" class="form-control col-sm-2 rounded-0 focus-ring" id="inputPassword">
                             </div>
                         </div>
+                        <button type="button" style="width: 100%; background-color: #2D3F57;" class="btn btn-primary border border-0 rounded-0" id="loginButton">Entrar</button>
+                        <button type="button" style="width: 100%; background-color: #2D3F57; margin-top: 10px;" class="btn btn-primary border border-0 rounded-0" id="preRegisterButton">Pré-Registro na Plataforma</button>
+                        <p id="errorMessage" class="text-danger mt-3"></p>
                     </div>
                     <div></div>
                     <div class="">
@@ -39,30 +41,109 @@
                             <p class="m-0 fs-4">Não possui conta?</p>
                             <p class="m-0 fs-4">Cadastre-se</p>
                         </div>
-
                         <div class="d-flex justify-content-center mt-3 gap-5">
-                            <button style="width: 150px; background-color: #FF7A00;" type="submit"
-                                class="btn btn-primary border border-0 rounded-0">Pessoa</button>
-                            <button style="width: 150px; background-color: #FF7A00;" type="submit"
-                                class="btn btn-primary border border-0 rounded-0">Empresa</button>
+                            <button style="width: 150px; background-color: #FF7A00;" type="submit" class="btn btn-primary border border-0 rounded-0 "disabled>Pessoa</button>
+                            <button style="width: 150px; background-color: #FF7A00;" type="submit" class="btn btn-primary border border-0 rounded-0 "disabled>Empresa</button>
                         </div>
                     </div>
-
                 </form>
-
-
             </div>
             <!-- Coluna da imagem -->
             <div class="col-md-6 p-0 d-none d-md-block">
                 <img src="asphalt.png" alt="Imagem" style="width: 100%; height: 100vh; object-fit: cover;">
             </div>
-
         </div>
     </div>
+    <!-- Adiciona o SDK do Firebase com compatibilidade -->
+    <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-auth-compat.js"></script>
+    <script>
+        // Configuração do Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyDbHoj6ITNs-4sxl79aMYMyahjOadBovmQ",
+            authDomain: "mobby-fretes.firebaseapp.com",
+            projectId: "mobby-fretes",
+            storageBucket: "mobby-fretes.appspot.com",
+            messagingSenderId: "306864195281",
+            appId: "1:306864195281:web:9a346bcb2d2654b30a67f0",
+            measurementId: "G-K2YBH5RB78"
+        };
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        // Inicializa o Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        // Função para fazer login
+        const handleLogin = () => {
+            const email = document.getElementById('inputEmail').value;
+            const password = document.getElementById('inputPassword').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            auth.signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    console.log('Usuário autenticado:', userCredential.user);
+                    alert('Login bem-sucedido!');
+                    window.location.href = '../Página Fretes/index.html'; // Redireciona para a página ListaFretes
+                })
+                .catch((error) => {
+                    console.error('Erro ao fazer login:', error);
+                    switch (error.code) {
+                        case 'auth/user-not-found':
+                            errorMessage.textContent = 'Usuário não encontrado. Verifique o email digitado.';
+                            break;
+                        case 'auth/wrong-password':
+                            errorMessage.textContent = 'Senha incorreta. Verifique a senha digitada.';
+                            break;
+                        default:
+                            errorMessage.textContent = 'Erro ao fazer login. Tente novamente mais tarde.';
+                            break;
+                    }
+                });
+        };
+
+        // Função para lidar com o pré-registro
+        const handlePreRegister = () => {
+            const email = document.getElementById('inputEmail').value;
+            const password = document.getElementById('inputPassword').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Verifica se os campos de email e senha estão preenchidos
+            if (!email || !password) {
+                errorMessage.textContent = 'Por favor, preencha o email e a senha.';
+                return;
+            }
+
+            // Realiza o pré-registro se os campos estiverem preenchidos
+            auth.createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    console.log('Usuário registrado:', userCredential.user);
+                    alert('Pré-registro bem-sucedido! Você será redirecionado para a página de fretes.');
+                    window.location.href = '../Página Fretes/index.html'; // Redireciona para a página de login
+                })
+                .catch((error) => {
+                    console.error('Erro ao fazer pré-registro:', error);
+                    switch (error.code) {
+                        case 'auth/email-already-in-use':
+                            errorMessage.textContent = 'O email já está em uso. Por favor, escolha outro.';
+                            break;
+                        case 'auth/invalid-email':
+                            errorMessage.textContent = 'O email fornecido é inválido.';
+                            break;
+                        case 'auth/weak-password':
+                            errorMessage.textContent = 'A senha é muito fraca. Por favor, escolha uma senha mais forte.';
+                            break;
+                        default:
+                            errorMessage.textContent = 'Erro ao fazer pré-registro. Tente novamente mais tarde.';
+                            break;
+                    }
+                });
+        };
+
+        // Adiciona os listeners aos botões
+        document.getElementById('loginButton').addEventListener('click', handleLogin);
+        document.getElementById('preRegisterButton').addEventListener('click', handlePreRegister);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
-
 </html>
+
