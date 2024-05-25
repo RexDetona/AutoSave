@@ -8,12 +8,18 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
         
-        
-        
-        .botao{width: 200px;height: 50px; flex-shrink: 0; background: #FF7A00; color: #fff;text-align: center; 
-               font-family: Montserrat;font-size: 100%; border-color: #FF7A00;}
-        
-      </style>
+        .botao {
+            width: 200px;
+            height: 50px;
+            flex-shrink: 0;
+            background: #FF7A00;
+            color: #fff;
+            text-align: center; 
+            font-family: Montserrat;
+            font-size: 100%;
+            border-color: #FF7A00;
+        }
+    </style>
     <title>PERFIL</title>
 </head>
 <body>
@@ -38,136 +44,108 @@
             </a>
         </div>
     </nav>  
-    <div>
-
-<div  >
-
-    <div class="text-center container mt-1 ">
-        <h1 style="font-family: 'Montserrat', sans-serif;">Perfil</h1>
-    </div>
-    
-
     <div class="container mt-5">
-        <div class="row">
+        <div class="text-center">
+            <h1 style="font-family: 'Montserrat', sans-serif;">Perfil</h1>
+        </div>
+        <div class="row mt-5">
             <div class="col-md-5">
                 <div class="esquerdo">
                     <form id="myForm" onsubmit="return validarFormulario()">
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Nome completo</label>
-                            <input id="nome" style="background-color: #D9D9D9; width: 100%;" placeholder="Carlos Pereira" type="text" class="form-control"  required>
-                            
+                            <label for="nome" class="form-label">Nome completo</label>
+                            <input id="nome" style="background-color: #D9D9D9; width: 100%;" placeholder="Carlos Pereira" type="text" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Email</label>
-                            <input id="email" style="background-color: #D9D9D9; width: 100%;" placeholder="carlosfretes@gmail.com" type="text" class="form-control"required >
+                            <label for="email" class="form-label">Email</label>
+                            <input id="email" style="background-color: #D9D9D9; width: 100%;" type="email" class="form-control" required>
                         </div>
-                        
-                    </form>
-                </div>
-                <div class="esquerdo">
-                    <form>
-                        
-                    </form>
-                </div>
-                <div class="esquerdo">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Senha</label>
-                            <input id="senha" style="background-color: #D9D9D9; width: 100%;" placeholder="**********" type="text" class="form-control" >
+                            <label for="senha" class="form-label">Senha</label>
+                            <input id="senha" style="background-color: #D9D9D9; width: 100%;" placeholder="**********" type="password" class="form-control">
                         </div>
-                    </form>
-                </div>
-                <div class="esquerdo">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">CPF</label>
-                            <input style="background-color: #D9D9D9; width: 100%;" placeholder="123.456.789-12" type="text" class="form-control" >
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input id="cpf" style="background-color: #D9D9D9; width: 100%;" placeholder="123.456.789-12" type="text" class="form-control">
                         </div>
-                    </form>
-                </div>
-                <div class="esquerdo">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Sexo</label>
-                            <input style="background-color: #D9D9D9; width: 100%;" placeholder="MASC" type="text" class="form-control" >
+                            <label for="sexo" class="form-label">Sexo</label>
+                            <input id="sexo" style="background-color: #D9D9D9; width: 100%;" placeholder="MASC" type="text" class="form-control">
                         </div>
-                    </form>
-                </div>
-                <div class="esquerdo">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Telefone</label>
-                            <input style="background-color: #D9D9D9; width: 100%;" placeholder="(16)9987-9999" type="text" class="form-control" >
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input id="telefone" style="background-color: #D9D9D9; width: 100%;" placeholder="(16)9987-9999" type="text" class="form-control">
                         </div>
                     </form>
                 </div>
             </div>
     
             <div class="col-md-2 d-flex justify-content-center align-items-center">
-                <img src="../img/meio forms.svg" alt="Imagem de Divisão" class=" d-none d-md-block">
+                <img src="../img/meio forms.svg" alt="Imagem de Divisão" class="d-none d-md-block">
             </div>
     
             <div class="col-md-5">
                 <div class="direito">
                     <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Cidade Residencial</label>
-                            <input style="background-color: #D9D9D9;" placeholder="Matão - SP" type="text" class="form-control" >
+                            <label for="cidade" class="form-label">Cidade Residencial</label>
+                            <input id="cidade" style="background-color: #D9D9D9;" placeholder="Matão - SP" type="text" class="form-control">
                         </div>
-                    </form>
-                </div>
-                <div class="direito">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Num CNH</label>
-                            <input style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control" >
+                            <label for="num_cnh" class="form-label">Num CNH</label>
+                            <input id="num_cnh" style="background-color: #D9D9D9;" placeholder="00000000000" type="text" class="form-control">
                         </div>
-                    </form>
-                </div>
-                <div class="direito">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Categoria CNH</label>
-                            <input style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control" >
+                            <label for="categoria_cnh" class="form-label">Categoria CNH</label>
+                            <input id="categoria_cnh" style="background-color: #D9D9D9;" placeholder="B" type="text" class="form-control">
                         </div>
-                    </form>
-                </div>
-                <div class="direito">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Cod CNH</label>
-                            <input style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control">
+                            <label for="cod_cnh" class="form-label">Cod CNH</label>
+                            <input id="cod_cnh" style="background-color: #D9D9D9;" placeholder="123456789" type="text" class="form-control">
                         </div>
-                    </form>
-                </div>
-                <div class="direito">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Data de Emissão</label>
-                            <input style="background-color: #D9D9D9; " placeholder="ex: 15/12/22" type="text" class="form-control" >
+                            <label for="data_emissao" class="form-label">Data de Emissão</label>
+                            <input id="data_emissao" style="background-color: #D9D9D9;" placeholder="ex: 15/12/22" type="text" class="form-control">
                         </div>
-                    </form>
-                </div>
-                <div class="direito">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Estado Expeditor</label>
-                            <input style="background-color: #D9D9D9;" placeholder="SP" type="text" class="form-control" >
+                            <label for="estado_expeditor" class="form-label">Estado Expeditor</label>
+                            <input id="estado_expeditor" style="background-color: #D9D9D9;" placeholder="SP" type="text" class="form-control">
                         </div>
                     </form>
                 </div>
-                
             </div>
         </div>
-        <div style="text-align: right;" class="col text-right">
-            <a href="cadastroCaminhoneiro2.html" style="text-align: center; align-items: center;" type="submit"  class=" botao btn btn-primary" >ATUALIZAR</a> 
-            
+        <div class="text-end">
+            <a href="cadastroCaminhoneiro2.html" class="botao btn btn-primary">ATUALIZAR</a>
         </div>
-        
     </div>
-    </div>
-</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Recupera o email armazenado no localStorage
+            const email = localStorage.getItem('userEmail');
+            if (email) {
+                document.getElementById('email').value = email;
+            }
+        });
+
+        function validarFormulario() {
+            // Função de validação do formulário
+            return true;
+        }
+
+        // Exemplo de como salvar o email no localStorage após login bem-sucedido
+        function saveEmailToLocalStorage(email) {
+            localStorage.setItem('userEmail', email);
+        }
+
+        // Exemplo de chamada da função saveEmailToLocalStorage após login
+        // auth.signInWithEmailAndPassword(email, password)
+        //     .then((userCredential) => {
+        //         saveEmailToLocalStorage(email);
+        //         // Resto do código de login
+        //     });
+    </script>
 </body>
 </html>
