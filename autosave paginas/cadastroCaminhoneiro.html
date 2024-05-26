@@ -6,13 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
-        
-        
-        
         .botao{width: 200px;height: 50px; flex-shrink: 0; background: #FF7A00; color: #fff;text-align: center; 
                font-family: Montserrat;font-size: 100%; border-color: #FF7A00;}
-        
-      </style>
+    </style>
     <title>CADASTRO</title>
 </head>
 <body>
@@ -20,59 +16,35 @@
         <h1 style="font-family: 'Montserrat', sans-serif;"><span style="color:#FF7A00;">Auto</span> Save</h1>
         <p>Cadastre-se para conseguir os melhores fretes para seu caminhão</p>
     </div>
-    
 
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-5">
                 <div class="esquerdo">
-                    <form id="myForm" onsubmit="return validarFormulario()">
+                    <form id="myForm">
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Nome completo</label>
-                            <input id="nome" style="background-color: #D9D9D9; width: 100%;" placeholder="Carlos Pereira" type="text" class="form-control"  required>
-                            
+                            <label for="nome" class="form-label">Nome completo</label>
+                            <input id="nome" style="background-color: #D9D9D9; width: 100%;" placeholder="Carlos Pereira" type="text" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Email</label>
-                            <input id="email" style="background-color: #D9D9D9; width: 100%;" placeholder="autosavefretes@gmail.com" type="text" class="form-control"required >
+                            <label for="email" class="form-label">Email</label>
+                            <input id="email" style="background-color: #D9D9D9; width: 100%;" placeholder="autosavefretes@gmail.com" type="email" class="form-control" required>
                         </div>
-                        
-                    </form>
-                </div>
-                <div class="esquerdo">
-                    <form>
-                        
-                    </form>
-                </div>
-                <div class="esquerdo">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Senha</label>
-                            <input id="senha" style="background-color: #D9D9D9; width: 100%;" placeholder="**********" type="text" class="form-control" >
+                            <label for="senha" class="form-label">Senha</label>
+                            <input id="senha" style="background-color: #D9D9D9; width: 100%;" placeholder="**********" type="password" class="form-control" required>
                         </div>
-                    </form>
-                </div>
-                <div class="esquerdo">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">CPF</label>
-                            <input style="background-color: #D9D9D9; width: 100%;" placeholder="123.456.789-12" type="text" class="form-control" >
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input id="cpf" style="background-color: #D9D9D9; width: 100%;" placeholder="123.456.789-12" type="text" class="form-control" required>
                         </div>
-                    </form>
-                </div>
-                <div class="esquerdo">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Sexo</label>
-                            <input style="background-color: #D9D9D9; width: 100%;" placeholder="" type="text" class="form-control" >
+                            <label for="sexo" class="form-label">Sexo</label>
+                            <input id="sexo" style="background-color: #D9D9D9; width: 100%;" placeholder="" type="text" class="form-control" required>
                         </div>
-                    </form>
-                </div>
-                <div class="esquerdo">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Telefone</label>
-                            <input style="background-color: #D9D9D9; width: 100%;" placeholder="(99)9999-9999" type="text" class="form-control" >
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input id="telefone" style="background-color: #D9D9D9; width: 100%;" placeholder="(99)9999-9999" type="text" class="form-control" required>
                         </div>
                     </form>
                 </div>
@@ -84,113 +56,100 @@
     
             <div class="col-md-5">
                 <div class="direito">
-                    <form>
+                    <form id="myForm2">
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Cidade Residencial</label>
-                            <input style="background-color: #D9D9D9;" placeholder="Matão - SP" type="text" class="form-control" >
+                            <label for="cidade" class="form-label">Cidade Residencial</label>
+                            <input id="cidade" style="background-color: #D9D9D9;" placeholder="Matão - SP" type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="num_cnh" class="form-label">Num CNH</label>
+                            <input id="num_cnh" style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="categoria_cnh" class="form-label">Categoria CNH</label>
+                            <input id="categoria_cnh" style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cod_cnh" class="form-label">Cod CNH</label>
+                            <input id="cod_cnh" style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="data_emissao" class="form-label">Data de Emissão</label>
+                            <input id="data_emissao" style="background-color: #D9D9D9;" placeholder="ex: 15/12/22" type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="estado_expeditor" class="form-label">Estado Expeditor</label>
+                            <input id="estado_expeditor" style="background-color: #D9D9D9;" placeholder="SP" type="text" class="form-control" required>
                         </div>
                     </form>
                 </div>
-                <div class="direito">
-                    <form>
-                        <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Num CNH</label>
-                            <input style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control" >
-                        </div>
-                    </form>
-                </div>
-                <div class="direito">
-                    <form>
-                        <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Categoria CNH</label>
-                            <input style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control" >
-                        </div>
-                    </form>
-                </div>
-                <div class="direito">
-                    <form>
-                        <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Cod CNH</label>
-                            <input style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control">
-                        </div>
-                    </form>
-                </div>
-                <div class="direito">
-                    <form>
-                        <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Data de Emissão</label>
-                            <input style="background-color: #D9D9D9; " placeholder="ex: 15/12/22" type="text" class="form-control" >
-                        </div>
-                    </form>
-                </div>
-                <div class="direito">
-                    <form>
-                        <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Estado Expeditor</label>
-                            <input style="background-color: #D9D9D9;" placeholder="SP" type="text" class="form-control" >
-                        </div>
-                    </form>
-                </div>
-                
             </div>
         </div>
         <div style="text-align: right;" class="col text-right">
-            <a href="cadastroCaminhoneiro2.html" style="text-align: center; align-items: center;" type="submit"  class=" botao btn btn-primary" >Proximo</a> 
-            
+            <button id="botaoProximo" class="botao btn btn-primary">Próximo</button>
         </div>
     </div>
-    
 
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"></script>
 
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDbHoj6ITNs-4sxl79aMYMyahjOadBovmQ",
+            authDomain: "mobby-fretes.firebaseapp.com",
+            databaseURL: "https://mobby-fretes-default-rtdb.firebaseio.com",
+            projectId: "mobby-fretes",
+            storageBucket: "mobby-fretes.appspot.com",
+            messagingSenderId: "306864195281",
+            appId: "1:306864195281:web:9a346bcb2d2654b30a67f0",
+            measurementId: "G-K2YBH5RB78"
+        };
 
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
 
+        document.getElementById("botaoProximo").addEventListener("click", function(event) {
+            event.preventDefault();
 
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+            const cpf = document.getElementById("cpf").value;
+            const sexo = document.getElementById("sexo").value;
+            const telefone = document.getElementById("telefone").value;
+            const cidade = document.getElementById("cidade").value;
+            const num_cnh = document.getElementById("num_cnh").value;
+            const categoria_cnh = document.getElementById("categoria_cnh").value;
+            const cod_cnh = document.getElementById("cod_cnh").value;
+            const data_emissao = document.getElementById("data_emissao").value;
+            const estado_expeditor = document.getElementById("estado_expeditor").value;
 
+            const dbRef = database.ref("usuarios");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-    
-    
-    
-
-
-<script>
-    function validarFormulario() {
-    var nome = document.getElementById("nome").value;
-    var email = document.getElementById("email").value;
-    var senha = document.getElementById("senha").value;
-
-    // Verifique se os campos estão preenchidos
-    if (nome === "" || email === "" || senha === "") {
-        alert("Por favor, preencha todos os campos.");
-        return false;
-    }
-
-    // Verifique o formato do email usando uma expressão regular
-    var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (!regexEmail.test(email)) {
-        alert("O formato do email é inválido.");
-        return false;
-    }
-
-    // Outras verificações de validação podem ser adicionadas conforme necessário
-
-    // Se tudo estiver válido, o formulário será enviado
-    return true;
-}
-</script>
+            dbRef.push({
+                nome: nome,
+                email: email,
+                senha: senha,
+                cpf: cpf,
+                sexo: sexo,
+                telefone: telefone,
+                cidade: cidade,
+                num_cnh: num_cnh,
+                categoria_cnh: categoria_cnh,
+                cod_cnh: cod_cnh,
+                data_emissao: data_emissao,
+                estado_expeditor: estado_expeditor
+            }).then(() => {
+                window.location.href = "cadastroCaminhoneiro2.html";
+            }).catch(error => {
+                console.error("Erro ao enviar dados para o Firebase: ", error);
+            });
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
